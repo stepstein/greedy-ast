@@ -1,0 +1,3 @@
+numpy>=1.26,<2.0
+# numba bleibt wie er ist —> siehe Hinweis unten
+numba==0.59.1
