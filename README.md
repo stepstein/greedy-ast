@@ -24,13 +24,17 @@ pip install -r requirements.txt
 python benchmarks.py 100000000  # reproduces Table-1 row for 1e8
 ---
 
-## 3  Dataset („first 10¹⁰ primes in 6k±1“)
+### Dataset (primes6.csv.gz)
 
-> **Realität-Check**:  
-> *10 billion* primes ≈ primes ≤ 1.05 × 10¹¹ → **≈ 455 MiB** gzipped → GitHub-Limit überschritten.  
-> Lösung 👉 split in 100 × 4.6 MiB-Chunks *oder* extern hosten (Zenodo, Figshare, G-Drive).  
-> Für den ersten Review genügt meist ein kleinerer Schnappschuss (z. B. alle ≤ 10⁹).
-
+* Range: 5 ≤ p ≤ 10^8, p ≡ 1 or 5 (mod 6)
+* Lines: 5 761 454 (1 header + 5 761 453 primes)
+* SHA-256: `<Ihr Hash>`
+* Download:  
+  ```bash
+  git lfs install
+  git clone https://github.com/<USER>/greedy-ast-sieve.git
+  cd greedy-ast-sieve && git lfs pull
+  
 ### Script zum Erstellen
 
 ```python
