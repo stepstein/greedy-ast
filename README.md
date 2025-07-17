@@ -34,23 +34,4 @@ python benchmarks.py 100000000  # reproduces Table-1 row for 1e8
   git lfs install
   git clone https://github.com/<USER>/greedy-ast-sieve.git
   cd greedy-ast-sieve && git lfs pull
-  
-### Script zum Erstellen
 
-```python
-# make_dataset.py
-import csv, gzip
-from greedy_ast import primes6_upto
-
-def main(limit=10_000_000_000):   # 10^10
-    last = 5
-    with gzip.open("primes6.csv.gz", "wt", newline="") as f:
-        w = csv.writer(f)
-        w.writerow(["prime", "gap"])
-        for p in primes6_upto(limit):
-            if p % 6 in (1,5):
-                w.writerow([p, p - last])
-                last = p
-
-if __name__ == "__main__":
-    main()
