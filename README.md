@@ -28,7 +28,7 @@ greedy_ast with its own limit<br>
 $ docker run –rm ghcr.io/stepstein/greedy-ast:latest  python benchmarks.py 1000000000
 ```
 
-## Paper (Zenodo / DOI)
+### Paper (Zenodo / DOI)
 
 The 6k ± 1 Composite–Displacement Sieve: Formal Analysis and Efficient Implementation  
 DOI: https://doi.org/10.5281/zenodo.18518120
